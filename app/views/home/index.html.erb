@@ -1,0 +1,24 @@
+<div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+    <div class="row">
+      <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+      <div class="col-lg-6">
+        <div class="p-5">
+          <div class="text-center">
+            <div class="container">
+            <% form_with @posts.each do |post|%>
+              <%= link_to  "all post", post_path(post),class: "btn btn-primary btn-user btn-block " %>
+            <% end %>
+            </div>
+              <br>
+              <div class="container">
+              <%=  link_to  "create new post", new_post_path,class: "btn btn-primary btn-user btn-block "  %>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
