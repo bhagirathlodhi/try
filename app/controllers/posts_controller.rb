@@ -13,6 +13,7 @@ class PostsController < ApplicationController
     @post = @user.posts.new(post_params)
 
     if @post.save
+      UserMailer.welcome_email(@post).deliver_now
       redirect_to root_path, notice: 'post has been created successfully'
     else
       render :new, notice: 'Somthing went wrong'
